@@ -5,7 +5,7 @@ import './App.css';
 
 const sleep = ms => new Promise(r => setTimeout(() => r(), ms));
 
-const readShows = createResource(async function fetchShows() {
+const readShows = createResource(async function fetchNews() {
   await sleep(3000);
   const res = await fetch(`http://api.tvmaze.com/search/shows?q=girls`);
   return await res.json();
