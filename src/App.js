@@ -6,14 +6,14 @@ import './App.css';
 const sleep = ms => new Promise(r => setTimeout(() => r(), ms));
 
 const readShows = createResource(async function fetchNews() {
-  await sleep(3000);
+  // await sleep(3000);
   const res = await fetch(`http://api.tvmaze.com/search/shows?q=girls`);
   return await res.json();
 });
 
 const Movies = withCache( (props) => {
 
-  const result = readShows(props.cache, props.title);
+  const result = readShows(props.cache);
 
   return (
     <React.Fragment>
