@@ -5,7 +5,7 @@ import './App.css';
 
 const sleep = ms => new Promise(r => setTimeout(() => r(), ms));
 
-const readNews = createResource(async function fetchNews() {
+const readShows = createResource(async function fetchShows() {
   await sleep(3000);
   const res = await fetch(`http://api.tvmaze.com/search/shows?q=girls`);
   return await res.json();
@@ -13,7 +13,7 @@ const readNews = createResource(async function fetchNews() {
 
 const Movies = withCache( (props) => {
 
-  const result = readNews(props.cache, props.title);
+  const result = readShows(props.cache, props.title);
 
   return (
     <React.Fragment>
