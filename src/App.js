@@ -6,8 +6,8 @@ import './App.css';
 const sleep = ms => new Promise(r => setTimeout(() => r(), ms));
 
 const readShows = createResource(async function fetchNews() {
-  // await sleep(3000);
-  const res = await fetch(`http://api.tvmaze.com/search/shows?q=girls`);
+  await sleep(3000);
+  const res = await fetch(`https://api.tvmaze.com/search/shows?q=suits`);
   return await res.json();
 });
 
@@ -23,7 +23,7 @@ const Movies = withCache( (props) => {
               <div className="column is-4">
                 <div className="movie">
                   <div className="movie__left">
-                    <img src={item.show.image.original} />
+                    <img src={item.show.image ? item.show.image.original : ''} alt="Show Poster Image"/>
                   </div>
                   <div className="movie__right">
                     <div className="movie__right__title">{item.show.name}</div>

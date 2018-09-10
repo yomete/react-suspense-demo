@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 It uses the Alpha version of React 16 (16.4.0-alpha.0911da3) so as to experiment with React Suspense.
 
+You can view the demo [here](https://build-uzpsujvyrl.now.sh/) and read the accompanying article at [LogRocket's Blog](https://blog.logrocket.com/)
+
 ## Getting started
 
 To get started, clone this repository and install the dependencies.
